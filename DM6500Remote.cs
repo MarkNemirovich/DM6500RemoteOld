@@ -1,6 +1,7 @@
 ﻿using DM6500Remote;
 using System;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -10,7 +11,6 @@ namespace DM6500RemoteOld
 {
     public partial class DM6500Remote : Form
     {
-        private const bool IsTest = true;
         private const double MIN_DELAY = 0.5;
         private const double MAX_DELAY = 1000000;
 
@@ -23,6 +23,8 @@ namespace DM6500RemoteOld
         private int _amount;
         private double _delay;
         private bool InProcess = false;
+
+        private bool _IsDebug = false;
 
         private string _errorMessage = "Wrong data";
 
@@ -57,6 +59,7 @@ namespace DM6500RemoteOld
         public DM6500Remote()
         {
             InitializeComponent();
+            IsDebug(ref _IsDebug);
         }
 
         #region UI
@@ -117,12 +120,16 @@ namespace DM6500RemoteOld
         {
             await Task.Run(CreateExcel); // in another thread
             RefreshTimer.Start();
-            if (IsTest)
+            if (_IsDebug)
                 await Task.Run(CreateVirtualMachine); // in another thread
             else
                 await Task.Run(CreateMachine); // in another thread
         }
-
+        [Conditional("DEBUG")]
+        private void IsDebug(ref bool isDebug)
+        {
+            isDebug = true;
+        }
         private async Task CreateVirtualMachine()
         {
             _virtualMachine = new VirtualMachine(_delay, _amount);
@@ -146,9 +153,9 @@ namespace DM6500RemoteOld
         {
             FillTheData();
         }
-        #endregion
+#endregion
 
-        #region Non-async
+#region Non-async
 
         private bool CheckName()
         {
@@ -165,8 +172,9 @@ namespace DM6500RemoteOld
         {
             ChangeActivePanel();
              _excelWritter.SaveFile();
-            _virtualMachine.WriteMessage -= ReadMessage;   // Unsubscription
-            _virtualMachine.WriteMessage -= ReadMessage;   // Unsubscription
+            if (_IsDebug)
+                _virtualMachine.WriteMessage -= ReadMessage;   // Unsubscription
+            _workMachine.WriteMessage -= ReadMessage;   // Unsubscription
             InProcess = false;
             RefreshTimer.Stop();
         }
@@ -191,6 +199,6 @@ namespace DM6500RemoteOld
         {
             Application.Exit();
         }
-        #endregion
+#endregion
     }
 }
