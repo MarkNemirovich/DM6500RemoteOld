@@ -174,7 +174,8 @@ namespace DM6500RemoteOld
              _excelWritter.SaveFile();
             if (_IsDebug)
                 _virtualMachine.WriteMessage -= ReadMessage;   // Unsubscription
-            _workMachine.WriteMessage -= ReadMessage;   // Unsubscription
+            else
+                _workMachine.WriteMessage -= ReadMessage;   // Unsubscription
             InProcess = false;
             RefreshTimer.Stop();
         }

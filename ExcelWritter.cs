@@ -7,7 +7,7 @@ namespace DM6500Remote
 {
     internal class ExcelWritter
     {
-        private readonly string _date = DateTime.Today.ToShortDateString().Replace(':', '_');
+        private readonly string _date = DateTime.Today.ToShortDateString().Replace('/', '_').Replace(':', '_');
         private readonly string _directory;
         private readonly string _fileName;
         private int _numberOfMeasurement;
@@ -59,8 +59,11 @@ namespace DM6500Remote
         }
         public void SaveFile()
         {
-
-            _exelFile.Save($"{_directory}/{_fileName}_{_date}_№{_numberOfMeasurement}.xlsx");
+            try
+            {
+                _exelFile.Save($"{_directory}/{_fileName}_{_date}_№{_numberOfMeasurement}.xlsx");
+            }
+            catch { }
         }
     }
 }
