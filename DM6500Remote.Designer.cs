@@ -61,18 +61,18 @@
             this.SettingsPanel.Controls.Add(this.FolderPath);
             this.SettingsPanel.Controls.Add(this.Start);
             this.SettingsPanel.Location = new System.Drawing.Point(0, 0);
-            this.SettingsPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.SettingsPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SettingsPanel.Name = "SettingsPanel";
-            this.SettingsPanel.Size = new System.Drawing.Size(599, 176);
+            this.SettingsPanel.Size = new System.Drawing.Size(799, 217);
             this.SettingsPanel.TabIndex = 0;
             // 
             // FileName
             // 
             this.FileName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.FileName.Location = new System.Drawing.Point(430, 80);
-            this.FileName.Margin = new System.Windows.Forms.Padding(2);
+            this.FileName.Location = new System.Drawing.Point(573, 98);
+            this.FileName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.FileName.Name = "FileName";
-            this.FileName.Size = new System.Drawing.Size(150, 31);
+            this.FileName.Size = new System.Drawing.Size(199, 36);
             this.FileName.TabIndex = 7;
             this.FileName.Text = "File_Name";
             // 
@@ -80,10 +80,9 @@
             // 
             this.DelayLable.AutoSize = true;
             this.DelayLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DelayLable.Location = new System.Drawing.Point(20, 140);
-            this.DelayLable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.DelayLable.Location = new System.Drawing.Point(27, 172);
             this.DelayLable.Name = "DelayLable";
-            this.DelayLable.Size = new System.Drawing.Size(266, 25);
+            this.DelayLable.Size = new System.Drawing.Size(316, 30);
             this.DelayLable.TabIndex = 5;
             this.DelayLable.Text = "Delay_between_measures";
             // 
@@ -91,30 +90,29 @@
             // 
             this.AmounLabel.AutoSize = true;
             this.AmounLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.AmounLabel.Location = new System.Drawing.Point(20, 80);
-            this.AmounLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.AmounLabel.Location = new System.Drawing.Point(27, 98);
             this.AmounLabel.Name = "AmounLabel";
-            this.AmounLabel.Size = new System.Drawing.Size(221, 25);
+            this.AmounLabel.Size = new System.Drawing.Size(263, 30);
             this.AmounLabel.TabIndex = 4;
             this.AmounLabel.Text = "Amount_of_measures";
             // 
             // Delay
             // 
             this.Delay.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Delay.Location = new System.Drawing.Point(300, 140);
-            this.Delay.Margin = new System.Windows.Forms.Padding(2);
+            this.Delay.Location = new System.Drawing.Point(400, 172);
+            this.Delay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Delay.Name = "Delay";
-            this.Delay.Size = new System.Drawing.Size(100, 31);
+            this.Delay.Size = new System.Drawing.Size(132, 36);
             this.Delay.TabIndex = 3;
-            this.Delay.Text = "0,5";
+            this.Delay.Text = "0.5";
             // 
             // Amount
             // 
             this.Amount.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Amount.Location = new System.Drawing.Point(300, 80);
-            this.Amount.Margin = new System.Windows.Forms.Padding(2);
+            this.Amount.Location = new System.Drawing.Point(400, 98);
+            this.Amount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Amount.Name = "Amount";
-            this.Amount.Size = new System.Drawing.Size(100, 31);
+            this.Amount.Size = new System.Drawing.Size(132, 36);
             this.Amount.TabIndex = 2;
             this.Amount.Text = "100";
             // 
@@ -122,10 +120,10 @@
             // 
             this.FolderPath.BackColor = System.Drawing.Color.PowderBlue;
             this.FolderPath.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.FolderPath.Location = new System.Drawing.Point(20, 20);
+            this.FolderPath.Location = new System.Drawing.Point(27, 25);
             this.FolderPath.Margin = new System.Windows.Forms.Padding(0);
             this.FolderPath.Name = "FolderPath";
-            this.FolderPath.Size = new System.Drawing.Size(559, 35);
+            this.FolderPath.Size = new System.Drawing.Size(745, 43);
             this.FolderPath.TabIndex = 1;
             this.FolderPath.Text = "Path";
             this.FolderPath.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -136,10 +134,10 @@
             // 
             this.Start.BackColor = System.Drawing.Color.LawnGreen;
             this.Start.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Start.Location = new System.Drawing.Point(480, 140);
+            this.Start.Location = new System.Drawing.Point(640, 172);
             this.Start.Margin = new System.Windows.Forms.Padding(0);
             this.Start.Name = "Start";
-            this.Start.Size = new System.Drawing.Size(100, 35);
+            this.Start.Size = new System.Drawing.Size(133, 43);
             this.Start.TabIndex = 0;
             this.Start.Text = "Start";
             this.Start.UseVisualStyleBackColor = false;
@@ -154,19 +152,20 @@
             this.MeasurementPanel.Controls.Add(this.Current);
             this.MeasurementPanel.Controls.Add(this.Stop);
             this.MeasurementPanel.Enabled = false;
-            this.MeasurementPanel.Location = new System.Drawing.Point(0, 180);
-            this.MeasurementPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.MeasurementPanel.Location = new System.Drawing.Point(0, 222);
+            this.MeasurementPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MeasurementPanel.Name = "MeasurementPanel";
-            this.MeasurementPanel.Size = new System.Drawing.Size(599, 125);
+            this.MeasurementPanel.Size = new System.Drawing.Size(799, 154);
             this.MeasurementPanel.TabIndex = 1;
             // 
             // ProgressBar
             // 
             this.ProgressBar.BackColor = System.Drawing.Color.Tomato;
             this.ProgressBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.ProgressBar.Location = new System.Drawing.Point(330, 20);
+            this.ProgressBar.Location = new System.Drawing.Point(440, 25);
+            this.ProgressBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ProgressBar.Name = "ProgressBar";
-            this.ProgressBar.Size = new System.Drawing.Size(250, 30);
+            this.ProgressBar.Size = new System.Drawing.Size(333, 37);
             this.ProgressBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.ProgressBar.TabIndex = 8;
             // 
@@ -174,10 +173,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(20, 80);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(27, 98);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(85, 25);
+            this.label4.Size = new System.Drawing.Size(99, 30);
             this.label4.TabIndex = 7;
             this.label4.Text = "Voltage";
             // 
@@ -185,30 +183,29 @@
             // 
             this.CurrentLabel.AutoSize = true;
             this.CurrentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CurrentLabel.Location = new System.Drawing.Point(20, 20);
-            this.CurrentLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.CurrentLabel.Location = new System.Drawing.Point(27, 25);
             this.CurrentLabel.Name = "CurrentLabel";
-            this.CurrentLabel.Size = new System.Drawing.Size(83, 25);
+            this.CurrentLabel.Size = new System.Drawing.Size(99, 30);
             this.CurrentLabel.TabIndex = 6;
             this.CurrentLabel.Text = "Current";
             // 
             // Voltage
             // 
             this.Voltage.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Voltage.Location = new System.Drawing.Point(140, 80);
-            this.Voltage.Margin = new System.Windows.Forms.Padding(2);
+            this.Voltage.Location = new System.Drawing.Point(187, 98);
+            this.Voltage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Voltage.Name = "Voltage";
-            this.Voltage.Size = new System.Drawing.Size(150, 31);
+            this.Voltage.Size = new System.Drawing.Size(199, 36);
             this.Voltage.TabIndex = 2;
             this.Voltage.Text = "0";
             // 
             // Current
             // 
             this.Current.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Current.Location = new System.Drawing.Point(140, 20);
-            this.Current.Margin = new System.Windows.Forms.Padding(2);
+            this.Current.Location = new System.Drawing.Point(187, 25);
+            this.Current.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Current.Name = "Current";
-            this.Current.Size = new System.Drawing.Size(150, 31);
+            this.Current.Size = new System.Drawing.Size(199, 36);
             this.Current.TabIndex = 1;
             this.Current.Text = "0";
             // 
@@ -216,10 +213,10 @@
             // 
             this.Stop.BackColor = System.Drawing.Color.LightCoral;
             this.Stop.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Stop.Location = new System.Drawing.Point(480, 80);
+            this.Stop.Location = new System.Drawing.Point(640, 98);
             this.Stop.Margin = new System.Windows.Forms.Padding(0);
             this.Stop.Name = "Stop";
-            this.Stop.Size = new System.Drawing.Size(100, 35);
+            this.Stop.Size = new System.Drawing.Size(133, 43);
             this.Stop.TabIndex = 0;
             this.Stop.Text = "Stop";
             this.Stop.UseVisualStyleBackColor = false;
@@ -229,10 +226,10 @@
             // 
             this.Exit.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Exit.Location = new System.Drawing.Point(480, 320);
+            this.Exit.Location = new System.Drawing.Point(640, 394);
             this.Exit.Margin = new System.Windows.Forms.Padding(0);
             this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(100, 35);
+            this.Exit.Size = new System.Drawing.Size(133, 43);
             this.Exit.TabIndex = 0;
             this.Exit.Text = "Exit";
             this.Exit.UseVisualStyleBackColor = false;
@@ -245,14 +242,14 @@
             // 
             // DM6500Remote
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.OldLace;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.Exit);
             this.Controls.Add(this.MeasurementPanel);
             this.Controls.Add(this.SettingsPanel);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "DM6500Remote";
             this.Text = "DM6500Remote";
             this.Load += new System.EventHandler(this.DM6500Remote_Load);

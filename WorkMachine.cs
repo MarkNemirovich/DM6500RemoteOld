@@ -13,10 +13,10 @@ namespace DM6500Remote
         protected readonly int _amount;
         private string deviceID;            // = "USB0::0x05E6::0x6500::04531633::INSTR";
         private Ivi.Visa.IMessageBasedSession session;
+        private bool interrupt = false;
 
         public delegate void Message(string[] str);
         public event Message WriteMessage;
-        public event Action Finish;
 
         public WorkMachine(double delay, int amount) 
         { 
@@ -44,9 +44,10 @@ namespace DM6500Remote
             {
                 return;
             }
+            interrupt = false;
             string[] data = new string[3];
             double time = 0;
-            for (int i = 0; i < _amount; i++)
+            for (int i = 0; i < _amount && !interrupt; i++)
             {
                 data[0] = time.ToString();
                 session.FormattedIO.WriteLine("*RST\n");
@@ -61,12 +62,11 @@ namespace DM6500Remote
         }
         public void StopExchange()
         {
+            interrupt = true;
             if (session == null)
             {
                 return;
             }
-            Finish?.Invoke();
-            session.Dispose();
         }
 
         private void GetVisaResourceName()

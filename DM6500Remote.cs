@@ -175,7 +175,10 @@ namespace DM6500RemoteOld
             if (_IsDebug)
                 _virtualMachine.WriteMessage -= ReadMessage;   // Unsubscription
             else
+            {
                 _workMachine.WriteMessage -= ReadMessage;   // Unsubscription
+                _workMachine.StopExchange();
+            }
             InProcess = false;
             RefreshTimer.Stop();
         }
